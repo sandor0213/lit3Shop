@@ -1,5 +1,12 @@
-<% form_for @product, url: products_path %>
 
+<%= form_for @product, url: products_path do |p| %>
+<%= p.label :title %> <br>
+<%= p.text_field :title %> <br>
+<%= p.label :description %> <br>
+<%= p.text_field :description %> <br>
+<%= p.text_field :price %> <br>
+<%= p.submit 'Add' %> <br>
+<% end %>
 
 
 
