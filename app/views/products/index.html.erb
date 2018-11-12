@@ -1,0 +1,19 @@
+
+
+
+
+<% if @product != [] %>
+
+<% @products.each do |product| %>
+<%= product.user.email %> <br>
+<%= product.title %> <br>
+<%= product.description %> <br>
+<%= product.price %> <br>
+<% if user_signed_in? %>
+<%= link_to "read more", product_path(product.id) %><br>
+<% end %>
+<% end %>
+<%else %>
+
+<p> No products </p>
+<% end %>
